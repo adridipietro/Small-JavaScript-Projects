@@ -1,13 +1,17 @@
-import React from 'react'
+const counter = document.querySelector('.counter')
+let count = 0
 
-export default function Counter() {
-    return (
-        <div class="counter-container">
-            <div class="buttons-container">
-                <button class="start" onclick={() => handleClick}>start</button>
-                <button class="stop" onclick={() => handleClick}>stop</button>
-            </div>
-            <p class="counter"></p>
-        </div>
-    )
+document.querySelector('.start').addEventListener("click", this.handleClick)
+document.querySelector('.stop').addEventListener("click", this.handleClick)
+
+
+
+handleClick = (e) => {
+    if (e.target.innerText == 'start'){
+        count++
+    } else if (e.target.innerText == 'stop'){
+        count--
+    } else {
+        count = 0
+    }
 }
