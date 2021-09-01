@@ -5,17 +5,23 @@ const stopButton = document.querySelector('.stop')
 const resetButton = document.querySelector('.reset')
 const counter = document.querySelector('.counter')
 
+
+
+
 startButton.addEventListener("click", () => {
-    const seconds = setInterval(() => {
-        count => count + 1
-    }, 1000)
-    
+    let newcount = 0
+    for (let i = 0; i < 100; i++){
+        newcount += count
+    }
+
     document.querySelector('.start').setAttribute("disabled", "true")
     document.querySelector('.stop').removeAttribute("disabled")
 
-    counter.innerText = seconds
+    counter.textContent = newcount
+    document.body.appendChild(counter)
 })
 
 stopButton.addEventListener("click", ()=> {
-    clearInterval(0)
+    
 })
+
