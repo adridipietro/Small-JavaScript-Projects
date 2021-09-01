@@ -10,6 +10,7 @@ ody {
 
 .span {
     position: center;
+    font-family: sans-serif;
 }
 
 h2 {
@@ -31,6 +32,7 @@ button {
     box-shadow: 3px 5px 3px rgb(253, 253, 253);
     border-radius: 3px;
     margin: 0.5rem;
+    font-family: sans-serif;
 }
 
 button:hover {
