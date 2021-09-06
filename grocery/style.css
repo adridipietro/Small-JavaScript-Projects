@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+*{
+    text-align: center;
+}
+
+
+
+body {
+    font-family: var(--ff-secondary);
+    background: lavender;
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: sans-serif
+}
+h1 {
+  font-size: 3rem;
+}
+
+.grocery-list{
+    margin-top: 20px;
+}
+
+li {
+    list-style: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+
+.clear-btn{
+    background: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: center;
+    align-items: center;
+    padding: 0.25rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+
+
+
+
+
+#grocery {
+    padding: 0.25rem;
+    padding: 2px;
+    background: rgb(255, 255, 255);
+    font-size: 1rem;
+    color: black;
+  }
+
+#grocery::placeholder {
+    font-family: sans-serif;
+    color: rgb(185, 182, 182);
+    font-size: 0.80rem;
+}
+  
+.submit-button {
+    background: white;
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: center;
+    align-items: center;
+    padding: 0.25rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.submit-button:hover {
+    background: lightcyan;
+    color: black;
+}
+  
+ 
