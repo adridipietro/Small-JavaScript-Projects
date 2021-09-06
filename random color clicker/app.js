@@ -7,6 +7,8 @@ const color = document.querySelector(".color")
 const title = document.querySelector('.title')
 // setting constant button to the document's element with the class name of "title"
 
+const container = document.querySelector('.container')
+
 btn.addEventListener("click", function () {
   let hexColor = "#"
   for (let i = 0; i < 6; i++) {
@@ -21,7 +23,7 @@ btn.addEventListener("click", function () {
 
   document.body.appendChild(title)
   document.body.appendChild(btn)
-  color.textContent = hexColor;
+  color.textContent = hexColor
   document.body.style.backgroundColor = hexColor
   // append title element + button element to the page after generating random color
   // put the value of the random color into text onto the page
@@ -34,3 +36,4 @@ function getRandomNumber() {
   return Math.floor(Math.random() * hex.length)
   // function that generates randomization of numbers + letters
 }
+
