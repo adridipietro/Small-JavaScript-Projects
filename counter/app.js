@@ -13,6 +13,8 @@ upButton.addEventListener("click", () => {
     counter.innerHTML = count
     if (count > 0) {
         counter.style.color = "magenta"
+    } else if (count === 0){
+        counter.style.color = "black"
     }
 })
 
@@ -21,6 +23,8 @@ downButton.addEventListener("click", ()=> {
     counter.innerHTML = count
     if (count < 0) {
         counter.style.color = "orange"
+    }else if (count === 0){
+        counter.style.color = "black"
     }
 })
 
