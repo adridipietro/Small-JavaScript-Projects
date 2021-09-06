@@ -1,27 +1,38 @@
 let count = 0
 
-const startButton = document.querySelector('.start')
-const stopButton = document.querySelector('.stop')
+const upButton = document.querySelector('.up')
+const downButton = document.querySelector('.down')
 const resetButton = document.querySelector('.reset')
 const counter = document.querySelector('.counter')
 
 
 
 
-startButton.addEventListener("click", () => {
-    let newcount = 0
-    for (let i = 0; i < 100; i++){
-        newcount += count
+upButton.addEventListener("click", () => {
+    count++
+    counter.innerHTML = count
+    if (count > 0) {
+        counter.style.color = "magenta"
     }
-
-    document.querySelector('.start').setAttribute("disabled", "true")
-    document.querySelector('.stop').removeAttribute("disabled")
-
-    counter.textContent = newcount
-    document.body.appendChild(counter)
 })
 
-stopButton.addEventListener("click", ()=> {
-    
+downButton.addEventListener("click", ()=> {
+    count--
+    counter.innerHTML = count
+    if (count < 0) {
+        counter.style.color = "orange"
+    }
 })
 
+resetButton.addEventListener("click", () => {
+    count = 0
+    counter.innerHTML = count
+    if (count === 0) {
+        counter.style.color = "black"
+    }
+})
+
+
+
+  
+ 
