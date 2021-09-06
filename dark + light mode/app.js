@@ -24,6 +24,6 @@ light.addEventListener("click", () => {
 })
 
 reset.addEventListener("click", () => { 
-    changeBackground('yellow') 
-    changeTitleColor('black')
+    changeBackground('') 
+    changeTitleColor('')
 })
