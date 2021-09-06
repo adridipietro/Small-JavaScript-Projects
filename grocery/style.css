@@ -51,9 +51,9 @@ li {
     font-size: 0.85rem;
 }
 
-
-
-
+.clear-btn:hover{
+    background: rgb(220, 189, 245)
+}
 
 
 #grocery {
@@ -62,7 +62,7 @@ li {
     background: rgb(255, 255, 255);
     font-size: 1rem;
     color: black;
-  }
+}
 
 #grocery::placeholder {
     font-family: sans-serif;
@@ -82,7 +82,7 @@ li {
 }
 
 .submit-button:hover {
-    background: lightcyan;
+    background: rgb(220, 189, 245);
     color: black;
 }
   
