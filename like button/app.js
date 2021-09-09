@@ -4,7 +4,9 @@ const submitButton = document.querySelector('.submit-button')
 const spadesContainer = document.querySelector('.spades-container')
 const input = document.querySelector('.content-input')
 
-const count = 0
+const counter = document.querySelector('.counter')
+
+let count = 0
 
 
 
@@ -28,12 +30,11 @@ form.addEventListener("submit", (e) => {
     const likeButton = document.createElement("button")
     likeButton.innerText = "like"
     likeButton.addEventListener("click", () => {
-       count = count + 1
+       count++
     })
 
-    const countDisplay = document.createElement("p")
-    countDisplay.innerText = `${count}`
-    element.appendChild(countDisplay)
+    counter.innerText = count
+    element.appendChild(counter)
     
 
     
