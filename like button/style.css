@@ -22,7 +22,7 @@
     border-radius: 3px;
 }
 
-button {
+.like-button {
     border-radius: 3px;
     border-color: black;
     border-width: 1px;
@@ -31,8 +31,46 @@ button {
     margin: 8rem 13rem;
 }
 
+.submit-button {
+    border-radius: 3px;
+    border-color: black;
+    border-width: 1px;
+    width: 60px;
+    position: absolute;
+}
+
+.content-input{
+    border-radius: 3px;
+    border-color: black;
+    border-width: 1px;
+}
+
 button:hover {
     color: blue;
     cursor: -webkit-grab;
+}
 
+h4{
+    font-size: small;
+    font-weight: 400;
+}
+
+.home {
+    border-radius: 3px;
+    border-color: black;
+    border-width: 1px;
+    width: 60px;
+
+}
+
+.about {
+    border-radius: 3px;
+    border-color: black;
+    border-width: 1px;
+    width: 60px;
+
+}
+
+.forms-container{
+    text-align: center;
 }
