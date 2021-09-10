@@ -1,9 +1,8 @@
-const navtoggle = document.querySelector('.nav-toggle')
+const navToggle = document.querySelector('.nav-toggle')
 const links = document.querySelector('.nav-links')
 
-navtoggle.addEventListener("click", () => {
-
-    links.classList.toggle()
+navToggle.addEventListener("click", () => {
+    links.classList.toggle("close-menu")
 })
 
 // classList: looks through all classes
