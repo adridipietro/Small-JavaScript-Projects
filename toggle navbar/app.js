@@ -1,8 +1,16 @@
 const navToggle = document.querySelector('.nav-toggle')
 const links = document.querySelector('.nav-links')
 
-navToggle.addEventListener("click", () => {
-    links.classList.toggle("close-menu")
-})
+function showMenu(){
+    debugger
+    if (links.style.display === 'none'){
+        links.style.display === 'block'
+    } else {
+        links.style.display === 'none'
+    }
+
+}
+    
 
 // classList: looks through all classes
+

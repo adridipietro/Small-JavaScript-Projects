@@ -9,9 +9,19 @@ ul {
 
 a {
     text-decoration: none;
+
 }
 
-nav {
+h2{
+    text-decoration: none;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+}
+
+.navbar {
     background: white;
 }
 
@@ -20,26 +30,29 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 1rem;
+    
 }
 
 .nav-toggle {
-    font-size: 1.5rem;
+    font-size: large;
     color: black;
     background: transparent;
     border-color: transparent;
     cursor: pointer;
+
 }
 
 .nav-toggle:hover {
     color: red;
-    transform: rotate(90deg);
+    padding-left: 1.5rem;
 }
 
-.nav-links a {
+.nav-links a{
     color: blue;
     font-size: 1rem;
     display: block;
     transition: var(--transition);
+    display: block;
 }
 
 .nav-links a:hover {
