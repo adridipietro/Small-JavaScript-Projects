@@ -1,15 +1,28 @@
 // Select bill total using query selector and assign to variable
-const billTotal = document.querySelector('.bill-total')
+const billTotal = document.querySelector('#bill-total')
 
-// Select tip percentage using query selector and assign to var
+// Select tip percentage using query selector and assign to variable
 const tipPercentage = document.querySelector('#tip-percentage')
 
-// onSelect set selected tip percentage amount
-const selectedTipPercentage = document.querySelector('#tip-percentage').value
+// Select tip form element and assign to variable
+const tipForm = document.querySelector('.tip-form')
 
-// create simple formula to generate tip amount based on tip percentage and bill total
-// and assign to variable
-const tipAmount = selectedTipPercentage * billTotal 
+// Using event listener + handler "onchange", set to anonymous function...
+tipForm.onchange = function(){
 
-// create simple formular to retrieve sum of tipAmount plus the billTotal
-const newTotal = tipAmount + billTotal
+    // Select selected tip percentage's value and assign to variable
+    const selectedTipPercentage = document.querySelector('#tip-percentage').value
+    
+    // create simple formula to generate tip amount based on tip percentage and bill total
+    // and assign to variable
+    const tipAmount = Number(selectedTipPercentage) * Number(billTotal.value)
+    
+    // create simple formular to retrieve sum of tipAmount plus the billTotal
+    const newTotal = tipAmount + Number(billTotal.value)
+    
+    //Change the innerHTML of both classes below and interpolate calculated amount
+    document.querySelector('.tip-amount').innerHTML = `Amount (in dollars) you should tip: $${tipAmount}`
+    document.querySelector('.tip-plus-total').innerHTML = `Amount total (including tip): $${newTotal}`
+
+}
+

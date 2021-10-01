@@ -9,17 +9,19 @@
 </head>
 <body>
     <section class="calculator-container">
-        <label for="bill-total">Total:</label><input type="text" class="bill-total" placeholder="what is your bill total">
-        <br/>
-        <br/>
-        <label for="tip-percentage">Choose a tip amount:</label>
-        <select name="tip-percentage" id="tip-percentage">
-            <option value="none" disabled>%</option>
-            <option value="10">10%</option>
-            <option value="15">15%</option>
-            <option value="20">20%</option>
-            <option value="25">25%</option>
-        </select>
+        <form class="tip-form">
+            <label for="bill-total">Total:</label><input type="text" id="bill-total" class="form-control" placeholder="what is your bill total">
+            <br/>
+            <br/>
+            <label for="tip-percentage">Choose a tip amount:</label>
+            <select name="tip-percentage" class="form-control" id="tip-percentage">
+                <option value="none" disabled>%</option>
+                <option value=".10">10%</option>
+                <option value=".15">15%</option>
+                <option value=".20">20%</option>
+                <option value=".25">25%</option>
+            </select>
+        </form>
     </section>
     <br/>
     <hr/>
