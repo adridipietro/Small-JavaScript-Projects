@@ -21,8 +21,13 @@ tipForm.onchange = function(){
     const newTotal = tipAmount + Number(billTotal.value)
     
     //Change the innerHTML of both classes below and interpolate calculated amount
-    document.querySelector('.tip-amount').innerHTML = `Amount (in dollars) you should tip: $${tipAmount}`
-    document.querySelector('.tip-plus-total').innerHTML = `Amount total (including tip): $${newTotal}`
+    document.querySelector('.tip-amount').innerHTML = `Amount (in dollars) you should tip: $${tipAmount.toFixed(2)}`
+    document.querySelector('.tip-plus-total').innerHTML = `Amount total (including tip): $${newTotal.toFixed(2)}`
+
+    if (billTotal.value < 0 ) {
+        document.querySelector('.tip-amount').innerHTML = `Sorry, No Negative Numbers!`
+        document.querySelector('.tip-plus-total').innerHTML = `Try Again!`
+    }
 
 }
 
