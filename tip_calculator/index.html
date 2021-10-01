@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIP CALCULATOR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="calculator-container">
+        <label for="bill-total">Total:</label><input type="text" class="bill-total" placeholder="what is your bill total">
+        <br/>
+        <br/>
+        <label for="tip-percentage">Choose a tip amount:</label>
+        <select name="tip-percentage" id="tip-percentage">
+            <option value="none" disabled>%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+        </select>
+    </section>
+    <br/>
+    <hr/>
+    <section class="results-container">
+        <p class="tip-amount">Amount (in dollars) you should tip:</p>
+        <p class="tip-plus-total">Amount Total:</p>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
