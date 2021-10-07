@@ -10,33 +10,35 @@
 <body>
     <h2>TIP TRACKER</h2>
     <br/>
-    <section class="date-container">
-      <form class="date-form">
-        <select id="day-dropdown">
-          <option value="" disabled>DAY</option>
-        </select>
-        <select id="month-dropdown">
-          <option value="" disabled>MONTH</option>
-        </select>
-        <select id="year-dropdown">
-          <option value="" disabled>YEAR</option>
-        </select>
-      </form>
-    </section>
-    <br/>
     <section class="form-container">
         <form class="form">
+            <select id="day-dropdown">
+              <option value="" disabled>DAY</option>
+            </select>
+            <select id="month-dropdown">
+              <option value="" disabled>MONTH</option>
+            </select>
+            <select id="year-dropdown">
+              <option value="" disabled>YEAR</option>
+            </select>
+            <br/>
+            <br/>
             <input type="text" class="form-control" id="total-tips" placeholder="total tips"/><br/>
             <input type="text" class="form-control" id="total-hours" placeholder="total hours"/><br/>
             <input type="text" class="form-control" id="hourly-wage" placeholder="hourly wage"/>
+            <br/>
+            <br/>
+            <button type="submit" value="submit">submit</button>
         </form>
     </section>
     <section class="results-container">
-        <p class="tips-per-hour"></p>
-        <p class="tips-plus-wage-per-hour"></p>
+        <ul class="list">
+
+        </ul>
     </section>
     <script src="index.js"></script>
     <script src="months.js"></script>
     <script src="days.js"></script>
+    <script src="years.js"></script>
 </body>
 </html>
