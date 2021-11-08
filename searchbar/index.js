@@ -37,7 +37,16 @@ const list = document.getElementById('list')
 function setList(results){
     clearList()
     for (const person of results){
+        // creating a li element for each result item
         const resultItem = document.createElement('li')
+        // adding a class to each item of the results
+        resultItem.classList.add('result-item')
+        // grabbing the name of the current point of the loop and adding the name as the list item's text
+        const text = document.createTextNode(person.name)
+        // appending the text to the result item
+        resultItem.appendChild(text)
+        // appending the result item to the list
+        list.appendChild(resultItem)
     }
 
     if (results.length === 0 ){
@@ -47,12 +56,19 @@ function setList(results){
 
 // removes list from page
 function clearList(){
-
+    // looping through each child of the search results list and remove each child
+    while (list.firstChild){
+        list.removeChild(list.firstChild)
+    }
 }
 
 // what happens if there are no results
 function noResults(){
-
+    const resultItem = document.createElement('li')
+    resultItem.classList.add('result-item')
+    const text = document.createTextNode('No results found. Sorry!')
+    resultItem.appendChild(text)
+    list.appendChild(resultItem)
 }
 
 
