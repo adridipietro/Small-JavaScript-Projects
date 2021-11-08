@@ -80,5 +80,17 @@ searchInput.addEventListener("input", (e) => {
     console.log(e.target.value)
 
     // declaring and assigning the value of the event's target AKA whatever is typed in the search bar
-    const value = e.target.value
+    let value = e.target.value
+
+    // if value exists and is larger than 0
+    if (value && value.trim().length > 0){
+        // redefining value to exclude white space and change input to all lowerCase
+         value = value.trim().toLowerCase()
+        //returning only the results of setList if the value of the search is included in the person's name
+        setList(people.filter(person => {
+            return person.name.includes(value)
+        }))
+    } else {
+        clearList()
+    }
 })
