@@ -31,6 +31,7 @@ const people = [
 // declaring and assigning variables to the HTML elements based on their ID value
 const searchInput = document.getElementById('search')
 const list = document.getElementById('list')
+const clearButton = document.getElementById('clear')
 
 // "people" but filtered based on search criteria
 // pastes search result to page visibly
@@ -93,4 +94,8 @@ searchInput.addEventListener("input", (e) => {
     } else {
         clearList()
     }
+})
+
+clearButton.addEventListener("click", () => {
+    clearList()
 })
