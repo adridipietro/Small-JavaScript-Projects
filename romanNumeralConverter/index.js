@@ -10,9 +10,9 @@ const isRoman = (string) => {
 
 submitButton.addEventListener("click", () => {
     const input = document.querySelector("#roman-numeral").value
-    
+    input.toUpperCase()
+
     if (input.isRoman()){
-        input.toUpperCase()
         let array = input.split("")
         let total = 0
     
