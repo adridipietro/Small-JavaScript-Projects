@@ -1,5 +1,6 @@
-//const results = document.getElementById("results")
-const submitButton = document.querySelector(".submit")
+const results = document.getElementById("results")
+//const submitButton = document.querySelector(".submit")
+let inputField = document.querySelector("#roman-numeral")
 
 const isRoman = (string) => {
     // regex pattern
@@ -8,8 +9,8 @@ const isRoman = (string) => {
 };
 
 
-submitButton.addEventListener("click", () => {
-
+inputField.addEventListener("input", (e) => {
+     
     let symbols = {
         "I": 1,
         "V": 5, 
@@ -20,13 +21,12 @@ submitButton.addEventListener("click", () => {
         "M": 1000
     }
 
-    const input = document.querySelector("#roman-numeral").value
-    input.toUpperCase()
+    var input = e.target.value
 
-    if (input.isRoman()){
-        let array = input.split("")
-        let total = 0
-    
+    if (isRoman(input)){
+        var array = input.split("")
+        var total = 0
+        //debugger
         for (let i = 0; i < array.length; i++){
             console.log(array[i])
             console.log(total)
@@ -35,7 +35,18 @@ submitButton.addEventListener("click", () => {
     } else {
         return 'Sorry!'
     }
-    return total
+    //console.log(total)
+    debugger
+    // creating a li element for each result item
+    const resultItem = document.createElement('li')
+    // adding a class to each item of the results
+    resultItem.classList.add('result-item')
+    // grabbing the total of the current point of the loop and adding the name as the list item's text
+    const text = document.createTextNode(total)
+    // appending the text to the result item
+    resultItem.appendChild(text)
+    // appending the result item to the list
+    results.appendChild(resultItem)
     
 
     
