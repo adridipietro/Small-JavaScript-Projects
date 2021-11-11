@@ -1,5 +1,7 @@
 * {
     text-align: center;
+    background-image: url('columns-Wikipedia.jpg');
+    background-size: 10cm;
 }
 
 button {
@@ -27,9 +29,10 @@ input:hover{
 
 .container{
     width: 300px;
-    border: 15px solid rgb(137, 151, 137);
+    border: 15px solid rgb(150, 160, 150);
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 40px;
+    background: none;
 }
