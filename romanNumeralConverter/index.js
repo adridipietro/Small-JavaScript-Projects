@@ -9,6 +9,17 @@ const isRoman = (string) => {
 
 
 submitButton.addEventListener("click", () => {
+
+    let symbols = {
+        "I": 1,
+        "V": 5, 
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    }
+
     const input = document.querySelector("#roman-numeral").value
     input.toUpperCase()
 
@@ -17,13 +28,14 @@ submitButton.addEventListener("click", () => {
         let total = 0
     
         for (let i = 0; i < array.length; i++){
-            const item = array[i]
-            console.log(item)
+            console.log(array[i])
             console.log(total)
+            symbols[array[i]] < symbols[array[i+1]] ? total -= symbols[array[i]]: total += symbols[array[i]]
         }
     } else {
         return 'Sorry!'
     }
+    return total
     
 
     
