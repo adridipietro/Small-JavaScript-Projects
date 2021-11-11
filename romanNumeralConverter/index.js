@@ -32,21 +32,26 @@ inputField.addEventListener("input", (e) => {
             console.log(total)
             symbols[array[i]] < symbols[array[i+1]] ? total -= symbols[array[i]]: total += symbols[array[i]]
         }
+        //console.log(total)
+        //debugger
+        // creating a li element for each result item
+        const resultItem = document.createElement('li')
+        // adding a class to each item of the results
+        resultItem.classList.add('result-item')
+        // grabbing the total of the current point of the loop and adding the name as the list item's text
+        const text = document.createTextNode(e.target.value + '' + '' + '=' + '' + total)
+        // appending the text to the result item
+        resultItem.appendChild(text)
+        // appending the result item to the list
+        results.appendChild(resultItem)
     } else {
-        return 'Sorry!'
+        const errorMessage = document.createElement('li')
+        errorMessage.classList.add("error")
+        const errorText = document.createTextNode('Sorry - Invalid Input. Try Again!')
+        errorMessage.appendChild(errorText)
+        results.appendChild(errorMessage)
     }
-    //console.log(total)
-    debugger
-    // creating a li element for each result item
-    const resultItem = document.createElement('li')
-    // adding a class to each item of the results
-    resultItem.classList.add('result-item')
-    // grabbing the total of the current point of the loop and adding the name as the list item's text
-    const text = document.createTextNode(total)
-    // appending the text to the result item
-    resultItem.appendChild(text)
-    // appending the result item to the list
-    results.appendChild(resultItem)
+   
     
 
     

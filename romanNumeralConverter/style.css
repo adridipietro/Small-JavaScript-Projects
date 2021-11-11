@@ -1,6 +1,6 @@
 * {
     text-align: center;
-    background-image: url('columns-Wikipedia.jpg');
+   /*  background-image: url('columns-Wikipedia.jpg'); */
     background-size: 10cm;
 }
 
@@ -33,4 +33,9 @@ input:hover{
     margin-right: auto;
     padding-bottom: 40px;
     background: white;
+}
+
+li {
+    list-style: none;
+    text-align: left;
 }
